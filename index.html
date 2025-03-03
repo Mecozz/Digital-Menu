@@ -29,29 +29,44 @@
       margin: 10px 0;
       display: block;
       width: 100%;
+      font-weight: bold;
     }
     .menu-table {
       width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
       display: flex;
       justify-content: space-between;
+      align-items: flex-start;
+      text-align: left;
     }
     .menu-column {
       width: 48%;
     }
-    .menu-table th, .menu-table td {
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
       font-size: 1.5em;
-      padding: 10px;
+      padding: 8px;
     }
-    .menu-table th {
+    th {
       text-align: center;
-    }
-    .menu-table td {
-      text-align: left;
+      font-weight: bold;
     }
     .price {
       text-align: right;
+    }
+    .image-slider {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .image-slider img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
     }
   </style>
 </head>
@@ -63,6 +78,7 @@
     <div class="menu-table">
       <div class="menu-column">
         <table>
+          <tr><th>Item</th><th>LG 12"</th><th>REG 8"</th></tr>
           <tr><td>MEATBALLS</td><td class="price">13.00</td><td class="price">11.00</td></tr>
           <tr><td>SAUSAGE</td><td class="price">13.00</td><td class="price">11.00</td></tr>
           <tr><td>HAM & CHEESE</td><td class="price">13.00</td><td class="price">11.00</td></tr>
@@ -76,6 +92,7 @@
       </div>
       <div class="menu-column">
         <table>
+          <tr><th>Item</th><th>LG 12"</th><th>REG 8"</th></tr>
           <tr><td>VEAL PARMESAN</td><td class="price">13.00</td><td class="price">11.00</td></tr>
           <tr><td>CHICKEN PARMESAN</td><td class="price">13.00</td><td class="price">11.00</td></tr>
           <tr><td>VEGETARIAN</td><td class="price">13.00</td><td class="price">11.00</td></tr>
@@ -88,6 +105,35 @@
         </table>
       </div>
     </div>
+    
+    <div class="image-slider">
+      <img src="placeholder1.jpg" id="img1" alt="Featured Dish 1">
+      <img src="placeholder2.jpg" id="img2" alt="Featured Dish 2">
+      <img src="placeholder3.jpg" id="img3" alt="Featured Dish 3">
+      <img src="placeholder4.jpg" id="img4" alt="Featured Dish 4">
+    </div>
   </div>
+  
+  <script>
+    const images = [
+      ["image1a.jpg", "image1b.jpg", "image1c.jpg"],
+      ["image2a.jpg", "image2b.jpg", "image2c.jpg"],
+      ["image3a.jpg", "image3b.jpg", "image3c.jpg"],
+      ["image4a.jpg", "image4b.jpg", "image4c.jpg"]
+    ];
+    const imgElements = [
+      document.getElementById("img1"),
+      document.getElementById("img2"),
+      document.getElementById("img3"),
+      document.getElementById("img4")
+    ];
+    let index = 0;
+    setInterval(() => {
+      for (let i = 0; i < imgElements.length; i++) {
+        imgElements[i].src = images[i][index % images[i].length];
+      }
+      index++;
+    }, 5000);
+  </script>
 </body>
 </html>
