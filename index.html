@@ -17,12 +17,12 @@
       padding-top: 20px;
     }
     .menu-title {
-      font-size: 3em;
+      font-size: 3.5em;
       font-weight: bold;
       color: red;
     }
     .menu-subtitle {
-      font-size: 1.8em;
+      font-size: 2em;
       background: yellow;
       color: red;
       padding: 10px;
@@ -46,8 +46,8 @@
       border-collapse: collapse;
     }
     th, td {
-      font-size: 1.5em;
-      padding: 8px;
+      font-size: 1.8em;
+      padding: 10px;
     }
     th {
       text-align: center;
@@ -59,13 +59,12 @@
     .image-slider {
       display: flex;
       justify-content: center;
-      gap: 40px;
+      gap: 20px;
       margin-top: 20px;
-      flex-wrap: wrap;
     }
     .image-slider img {
-      width: 150px;
-      height: 120px;
+      width: 18%;
+      height: 220px;
       object-fit: cover;
       border-radius: 10px;
     }
@@ -83,9 +82,6 @@
           <tr><td>MEATBALLS</td><td class="price">13.00</td><td class="price">11.00</td></tr>
           <tr><td>SAUSAGE</td><td class="price">13.00</td><td class="price">11.00</td></tr>
           <tr><td>HAM & CHEESE</td><td class="price">13.00</td><td class="price">11.00</td></tr>
-          <tr><td>SALAMI</td><td class="price">13.00</td><td class="price">11.00</td></tr>
-          <tr><td>TUNA</td><td class="price">13.00</td><td class="price">11.00</td></tr>
-          <tr><td>CHEESEBURGER</td><td class="price">13.00</td><td class="price">11.00</td></tr>
         </table>
       </div>
       <div class="menu-column">
@@ -94,9 +90,6 @@
           <tr><td>ROAST BEEF</td><td class="price">13.00</td><td class="price">11.00</td></tr>
           <tr><td>TURKEY</td><td class="price">13.00</td><td class="price">11.00</td></tr>
           <tr><td>SAUSAGE & MEATBALLS</td><td class="price">13.00</td><td class="price">11.75</td></tr>
-          <tr><td>COMBO ITALIAN</td><td class="price">13.75</td><td class="price">11.75</td></tr>
-          <tr><td>LAMB GRINDER</td><td class="price">13.75</td><td class="price">---</td></tr>
-          <tr><td>EXTRA CHEESE</td><td class="price">2.50</td><td class="price">2.00</td></tr>
         </table>
       </div>
     </div>
@@ -107,31 +100,27 @@
       <img src="placeholder3.jpg" id="img3" alt="Featured Dish 3">
       <img src="placeholder4.jpg" id="img4" alt="Featured Dish 4">
       <img src="placeholder5.jpg" id="img5" alt="Featured Dish 5">
-      <img src="placeholder6.jpg" id="img6" alt="Featured Dish 6">
-      <img src="placeholder7.jpg" id="img7" alt="Featured Dish 7">
-      <img src="placeholder8.jpg" id="img8" alt="Featured Dish 8">
     </div>
   </div>
   
   <script>
     const images = [
-      ["https://github.com/Mecozz/Digital-Menu/blob/main/pizza4.png?raw=true", "https://github.com/Mecozz/Digital-Menu/blob/main/Pizza3.png?raw=true", "image1c.jpg"],
-      ["https://github.com/Mecozz/Digital-Menu/blob/main/SubRings.png?raw=true", "https://github.com/Mecozz/Digital-Menu/blob/main/StkFries.png?raw=true", "image2c.jpg"],
-      ["https://github.com/Mecozz/Digital-Menu/blob/main/Calzone4.png?raw=true", "https://github.com/Mecozz/Digital-Menu/blob/main/Calzone3.png?raw=true", "image3c.jpg"],
-      ["image4a.jpg", "https://github.com/Mecozz/Digital-Menu/blob/main/CalzoneRingsFries.png?raw=true", "image4c.jpg"],
-      ["image5a.jpg", "image5b.jpg", "image5c.jpg"],
-      ["image6a.jpg", "image6b.jpg", "image6c.jpg"],
-      ["image7a.jpg", "image7b.jpg", "image7c.jpg"],
-      ["image8a.jpg", "image8b.jpg", "image8c.jpg"]
+      ["https://github.com/Mecozz/Digital-Menu/blob/main/pizza4.png?raw=true", "https://github.com/Mecozz/Digital-Menu/blob/main/Pizza2.png?raw=true", "https://github.com/Mecozz/Digital-Menu/blob/main/PIzza1.png?raw=true"],
+      ["https://github.com/Mecozz/Digital-Menu/blob/main/Calzone1.png?raw=true", "https://github.com/Mecozz/Digital-Menu/blob/main/Calzone4.png?raw=true", "https://github.com/Mecozz/Digital-Menu/blob/main/Calzone2.png?raw=true"],
+      ["https://github.com/Mecozz/Digital-Menu/blob/main/CalzoneRingsFries.png?raw=true", "https://github.com/Mecozz/Digital-Menu/blob/main/Calzone5.png?raw=true", "https://github.com/Mecozz/Digital-Menu/blob/main/Calzone3.png?raw=true"],
+      ["https://github.com/Mecozz/Digital-Menu/blob/main/StkFries.png?raw=true", "https://github.com/Mecozz/Digital-Menu/blob/main/StkCheese.png?raw=true", "https://github.com/Mecozz/Digital-Menu/blob/main/SubRings.png?raw=true"],
+      ["https://github.com/Mecozz/Digital-Menu/blob/main/Spaghetti.png?raw=true", "image5b.jpg", "image5c.jpg"]
     ];
     const imgElements = document.querySelectorAll(".image-slider img");
     let index = 0;
     setInterval(() => {
       imgElements.forEach((img, i) => {
-        img.src = images[i][index % images[i].length];
+        setTimeout(() => {
+          img.src = images[i][index % images[i].length];
+        }, i * 2000); // Delay each image change by 2 seconds
       });
       index++;
-    }, 5000);
+    }, 8000);
   </script>
 </body>
 </html>
