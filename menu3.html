@@ -11,10 +11,12 @@
             font-family: Arial, sans-serif;
             text-align: left;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 40px;
         }
         .menu-container {
-            width: 100%;
+            width: 90%;
             max-width: 1920px;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -43,6 +45,34 @@
         }
         .price {
             text-align: right;
+        }
+        .image-section {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            width: 90%;
+            max-width: 1920px;
+            margin-top: 40px;
+        }
+        .image-container {
+            flex: 1;
+            max-width: 250px;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 10px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .image-container img.active {
+            opacity: 1;
         }
     </style>
 </head>
@@ -78,22 +108,6 @@
             </table>
         </div>
         <div class="menu-section">
-            <div class="category">SIDE ORDERS</div>
-            <table class="menu-table">
-                <tr><td>BAKLAVA</td><td class="price">3.75</td></tr>
-                <tr><td>GARLIC BREAD - PLAIN</td><td class="price">4.50</td></tr>
-                <tr><td>W/ CHEESE</td><td class="price">5.75</td></tr>
-                <tr><td>FRENCH FRIES</td><td class="price">6.75</td><td class="price">5.00</td></tr>
-                <tr><td>ONION RINGS</td><td class="price">6.75</td><td class="price">5.00</td></tr>
-                <tr><td>RICE PILAF</td><td class="price">6.75</td></tr>
-                <tr><td>GREEK PITA</td><td class="price">9.75</td></tr>
-                <tr><td>FRIED MUSHROOMS</td><td class="price">9.75</td></tr>
-                <tr><td>MOZZARELLA STICKS</td><td class="price">9.75</td></tr>
-                <tr><td>CHICKEN WINGS</td><td class="price">9.75</td></tr>
-                <tr><td>JALAPENO POPPERS</td><td class="price">9.75</td></tr>
-            </table>
-        </div>
-        <div class="menu-section">
             <div class="category">DINNERS</div>
             <table class="menu-table">
                 <tr><td>FRIED CHICKEN FINGERS & FRIES</td><td class="price">13.75</td></tr>
@@ -110,8 +124,15 @@
                 <tr><td>W/ SAUSAGE</td><td class="price">11.75</td></tr>
                 <tr><td>COMBO</td><td class="price">12.75</td></tr>
                 <tr><td>W/ CHICKEN OR VEAL</td><td class="price">11.75</td></tr>
-            </table>
+             </table>
         </div>
+    </div>
+    <div class="image-section">
+        <div class="image-container"><img src="https://github.com/Mecozz/Digital-Menu/blob/main/Calzone1.png?raw=true" class="active"><img src="https://github.com/Mecozz/Digital-Menu/blob/main/Calzone1.png?raw=true"><img src="https://github.com/Mecozz/Digital-Menu/blob/main/Calzone1.png?raw=true"></div>
+        <div class="image-container"><img src="https://github.com/Mecozz/Digital-Menu/blob/main/Calzone2.png?raw=true" class="active"><img src="https://github.com/Mecozz/Digital-Menu/blob/main/Calzone2.png?raw=true"><img src="https://github.com/Mecozz/Digital-Menu/blob/main/Calzone2.png?raw=true"></div>
+        <div class="image-container"><img src="https://github.com/Mecozz/Digital-Menu/blob/main/Calzone4.png?raw=true" class="active"><img src="https://github.com/Mecozz/Digital-Menu/blob/main/Calzone4.png?raw=true"><img src="https://github.com/Mecozz/Digital-Menu/blob/main/Calzone4.png?raw=true"></div>
+        <div class="image-container"><img src="https://github.com/Mecozz/Digital-Menu/blob/main/Calzone3.png?raw=true" class="active"><img src="https://github.com/Mecozz/Digital-Menu/blob/main/Calzone3.png?raw=true"><img src="https://github.com/Mecozz/Digital-Menu/blob/main/Calzone3.png?raw=true"></div>
+        <div class="image-container"><img src="https://github.com/Mecozz/Digital-Menu/blob/main/Calzone5.png?raw=true" class="active"><img src="https://github.com/Mecozz/Digital-Menu/blob/main/Calzone5.png?raw=true"><img src="https://github.com/Mecozz/Digital-Menu/blob/main/Calzone5.png?raw=true"></div>
     </div>
 </body>
 </html>
