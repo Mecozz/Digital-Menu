@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <style>
+        body {
+            background: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: left;
+            display: flex;
+            justify-content: center;
+        }
+        .menu-container {
+            width: 90%;
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+        .category {
+            background: yellow;
+            color: black;
+            font-size: 1em;
+            font-weight: bold;
+            text-align: center;
+            padding: 5px;
+        }
+        .menu-section {
+            display: flex;
+            flex-direction: column;
+        }
+        .menu-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.8em;
+        }
+        .menu-table td {
+            padding: 5px;
+        }
+        .price {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <div class="menu-section">
+            <div class="category">STEAK SUBS</div>
+            <table class="menu-table">
+                <tr><td>CHEESE STEAK</td><td class="price">13.00</td><td class="price">10.50</td></tr>
+                <tr><td>PEPPER STEAK</td><td class="price">13.00</td><td class="price">11.00</td></tr>
+                <tr><td>ONION STEAK</td><td class="price">13.00</td><td class="price">11.00</td></tr>
+                <tr><td>MUSHROOM STEAK</td><td class="price">13.00</td><td class="price">11.00</td></tr>
+                <tr><td>2 ITEMS</td><td class="price">13.00</td><td class="price">11.00</td></tr>
+                <tr><td>3 ITEMS</td><td class="price">13.75</td><td class="price">12.75</td></tr>
+                <tr><td>SPECIAL STEAK</td><td class="price">13.75</td><td class="price">12.75</td></tr>
+                <tr><td>EXTRA CHEESE</td><td class="price">2.50</td><td class="price">2.00</td></tr>
+                <tr><td>EXTRA STEAK</td><td class="price">5.00</td><td class="price">3.50</td></tr>
+            </table>
+            <div class="category">ITALIAN DISHES</div>
+            <table class="menu-table">
+                <tr><td>SPAGHETTI & SAUCE</td><td class="price">10.00</td></tr>
+                <tr><td>W/ MEATBALLS</td><td class="price">11.75</td></tr>
+                <tr><td>W/ SAUSAGE</td><td class="price">11.75</td></tr>
+                <tr><td>COMBO</td><td class="price">12.75</td></tr>
+                <tr><td>W/ CHICKEN OR VEAL</td><td class="price">11.75</td></tr>
+            </table>
+        </div>
+        <div class="menu-section">
+            <div class="category">SALADS</div>
+            <table class="menu-table">
+                <tr><td>TOSSED SALAD</td><td class="price">9.00</td></tr>
+                <tr><td>ANTIPASTO SALAD</td><td class="price">12.00</td></tr>
+                <tr><td>GREEK SALAD</td><td class="price">11.00</td></tr>
+                <tr><td>CHEF’S SALAD</td><td class="price">11.00</td></tr>
+                <tr><td>TUNA SALAD</td><td class="price">11.00</td></tr>
+                <tr><td>TURKEY SALAD</td><td class="price">11.00</td></tr>
+                <tr><td>CHICKEN SALAD</td><td class="price">11.00</td></tr>
+                <tr><td>BUFFALO CHICKEN SALAD</td><td class="price">11.00</td></tr>
+                <tr><td>GRILLED CHICKEN SALAD</td><td class="price">11.00</td></tr>
+                <tr><td>LAMB OR STEAK SALAD</td><td class="price">12.00</td></tr>
+            </table>
+            <div class="category">DINNERS</div>
+            <table class="menu-table">
+                <tr><td>FRIED CHICKEN FINGERS & FRIES</td><td class="price">13.75</td></tr>
+                <tr><td>BUFFALO TENDERS & FRIES</td><td class="price">13.75</td></tr>
+                <tr><td>REG WINGS & FRIES</td><td class="price">13.75</td></tr>
+                <tr><td>LAMB PLATE W/ GREEK SALAD & FRIES</td><td class="price">23.00</td></tr>
+            </table>
+        </div>
+        <div class="menu-section">
+            <div class="category">SIDE ORDERS</div>
+            <table class="menu-table">
+                <tr><td>BAKLAVA</td><td class="price">3.75</td></tr>
+                <tr><td>GARLIC BREAD - PLAIN</td><td class="price">4.50</td></tr>
+                <tr><td>W/ CHEESE</td><td class="price">5.75</td></tr>
+                <tr><td>FRENCH FRIES</td><td class="price">6.75</td><td class="price">5.00</td></tr>
+                <tr><td>ONION RINGS</td><td class="price">6.75</td><td class="price">5.00</td></tr>
+                <tr><td>RICE PILAF</td><td class="price">6.75</td></tr>
+                <tr><td>GREEK PITA</td><td class="price">9.75</td></tr>
+                <tr><td>FRIED MUSHROOMS</td><td class="price">9.75</td></tr>
+                <tr><td>MOZZARELLA STICKS</td><td class="price">9.75</td></tr>
+                <tr><td>CHICKEN WINGS</td><td class="price">9.75</td></tr>
+                <tr><td>JALAPENO POPPERS</td><td class="price">9.75</td></tr>
+                <tr><td>CHICKEN TENDERS</td><td class="price">9.75</td></tr>
+                <tr><td>BUFFALO TENDERS</td><td class="price">9.75</td></tr>
+                <tr><td>FRIED RAVIOLI</td><td class="price">9.75</td></tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
