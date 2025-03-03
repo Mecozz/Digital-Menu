@@ -12,17 +12,17 @@
       text-align: center;
     }
     .menu-container {
-      width: 95%;
+      width: 98%;
       margin: auto;
-      padding-top: 10px;
+      padding-top: 5px;
     }
 
     /* Title with Shadow Effect */
     .menu-title {
-      font-size: 3.2em;
+      font-size: 3.8em;
       font-weight: bold;
       color: red;
-      text-shadow: 3px 3px 5px rgba(255, 0, 0, 0.6);
+      text-shadow: 4px 4px 6px rgba(255, 0, 0, 0.7);
     }
 
     /* Full-Width Yellow Banner */
@@ -31,8 +31,8 @@
       justify-content: space-between;
       align-items: center;
       background: yellow;
-      padding: 12px;
-      font-size: 1.8em;
+      padding: 15px;
+      font-size: 2em;
       font-weight: bold;
       width: 100%;
     }
@@ -52,15 +52,15 @@
       margin-top: 5px;
     }
     .menu-column {
-      width: 48%;
+      width: 49%;
     }
     table {
       width: 100%;
       border-collapse: collapse;
     }
     th, td {
-      font-size: 1.4em; /* Adjusted to fit full menu */
-      padding: 6px;
+      font-size: 1.8em; /* Maximized while fitting */
+      padding: 10px;
     }
     th {
       text-align: center;
@@ -75,15 +75,15 @@
       display: flex;
       justify-content: space-evenly;
       align-items: center;
-      margin-top: 10px;
+      margin-top: 15px;
       width: 100%;
       padding-bottom: 10px;
     }
     .image-slider img {
-      width: 10%;
-      height: 90px;
+      width: 14%;
+      height: 120px;
       object-fit: cover;
-      border-radius: 8px;
+      border-radius: 10px;
       transition: opacity 1s ease-in-out;
     }
 
@@ -97,8 +97,8 @@
         width: 100%;
       }
       .image-slider img {
-        width: 18%;
-        height: 80px;
+        width: 20%;
+        height: 100px;
       }
     }
   </style>
@@ -154,22 +154,24 @@
   </div>
 
   <script>
-    let images = [
-      "https://github.com/Mecozz/Digital-Menu/blob/main/PIzza1.png?raw=true",
-      "https://github.com/Mecozz/Digital-Menu/blob/main/Pizza2.png?raw=true",
-      "https://github.com/Mecozz/Digital-Menu/blob/main/pizza4.png?raw=true",
-      "https://github.com/Mecozz/Digital-Menu/blob/main/Pizza3.png?raw=true",
-      "https://github.com/Mecozz/Digital-Menu/blob/main/Calzone1.png?raw=true",
-      "https://github.com/Mecozz/Digital-Menu/blob/main/Spaghetti.png?raw=true"
+    let imageSets = [
+      ["https://github.com/Mecozz/Digital-Menu/blob/main/PIzza1.png?raw=true", "https://github.com/Mecozz/Digital-Menu/blob/main/Pizza2.png?raw=true", "https://github.com/Mecozz/Digital-Menu/blob/main/pizza4.png?raw=true"],
+      ["https://github.com/Mecozz/Digital-Menu/blob/main/Pizza3.png?raw=true", "https://github.com/Mecozz/Digital-Menu/blob/main/Calzone1.png?raw=true", "https://github.com/Mecozz/Digital-Menu/blob/main/Calzone2.png?raw=true"],
+      ["https://github.com/Mecozz/Digital-Menu/blob/main/Calzone3.png?raw=true", "https://github.com/Mecozz/Digital-Menu/blob/main/Calzone4.png?raw=true", "https://github.com/Mecozz/Digital-Menu/blob/main/Calzone5.png?raw=true"],
+      ["https://github.com/Mecozz/Digital-Menu/blob/main/CalzoneRingsFries.png?raw=true", "https://github.com/Mecozz/Digital-Menu/blob/main/StkFries.png?raw=true", "https://github.com/Mecozz/Digital-Menu/blob/main/SubRings.png?raw=true"],
+      ["https://github.com/Mecozz/Digital-Menu/blob/main/StkCheese.png?raw=true", "https://github.com/Mecozz/Digital-Menu/blob/main/Spaghetti.png?raw=true", "https://github.com/Mecozz/Digital-Menu/blob/main/PIzza1.png?raw=true"]
     ];
     
     let imgElements = document.querySelectorAll(".image-slider img");
-    
-    setInterval(() => {
+
+    function updateImages() {
       imgElements.forEach((img, i) => {
-        img.src = images[(i + Math.floor(Math.random() * images.length)) % images.length];
+        img.src = imageSets[i][Math.floor(Math.random() * 3)];
       });
-    }, 5000);
+    }
+
+    updateImages();
+    setInterval(updateImages, 5000);
   </script>
 </body>
 </html>
