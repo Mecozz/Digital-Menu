@@ -57,7 +57,7 @@
       text-align: right;
     }
     
-    /* Image Slider */
+    /* Image Slider - Reduced Size */
     .image-slider {
       display: flex;
       justify-content: space-evenly;
@@ -66,8 +66,8 @@
       width: 100%;
     }
     .image-slider img {
-      width: 18%;
-      height: 150px;
+      width: 15%; /* Reduced from 18% */
+      height: 120px; /* Reduced from 150px */
       object-fit: cover;
       border-radius: 8px;
       transition: opacity 1s ease-in-out;
@@ -76,7 +76,7 @@
       content: url('fallback.jpg');
     }
 
-    /* Mobile View */
+    /* Mobile View Adjustments */
     @media (max-width: 768px) {
       .menu-table {
         flex-direction: column;
@@ -86,8 +86,8 @@
         width: 100%;
       }
       .image-slider img {
-        width: 30%;
-        height: 120px;
+        width: 25%;
+        height: 100px;
       }
     }
   </style>
