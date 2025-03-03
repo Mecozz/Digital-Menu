@@ -102,15 +102,36 @@
     </div>
     
     <div class="image-slider">
-      <img src="https://github.com/Mecozz/Digital-Menu/blob/main/pizza4.png?raw=true" id="img1" alt="https://github.com/Mecozz/Digital-Menu/blob/main/Pizza3.png?raw=true">
-      <img src="https://github.com/Mecozz/Digital-Menu/blob/main/SubRings.png?raw=true" id="img2" alt="https://github.com/Mecozz/Digital-Menu/blob/main/StkFries.png?raw=true">
-      <img src="https://github.com/Mecozz/Digital-Menu/blob/main/Calzone4.png?raw=true" id="img3" alt="https://github.com/Mecozz/Digital-Menu/blob/main/Calzone3.png?raw=true">
-      <img src="https://github.com/Mecozz/Digital-Menu/blob/main/CalzoneRingsFries.png?raw=true" id="img4" alt="Featured Dish 4">
+      <img src="placeholder1.jpg" id="img1" alt="Featured Dish 1">
+      <img src="placeholder2.jpg" id="img2" alt="Featured Dish 2">
+      <img src="placeholder3.jpg" id="img3" alt="Featured Dish 3">
+      <img src="placeholder4.jpg" id="img4" alt="Featured Dish 4">
       <img src="placeholder5.jpg" id="img5" alt="Featured Dish 5">
       <img src="placeholder6.jpg" id="img6" alt="Featured Dish 6">
       <img src="placeholder7.jpg" id="img7" alt="Featured Dish 7">
       <img src="placeholder8.jpg" id="img8" alt="Featured Dish 8">
     </div>
   </div>
+  
+  <script>
+    const images = [
+      ["https://github.com/Mecozz/Digital-Menu/blob/main/pizza4.png?raw=true", "https://github.com/Mecozz/Digital-Menu/blob/main/Pizza3.png?raw=true", "image1c.jpg"],
+      ["https://github.com/Mecozz/Digital-Menu/blob/main/SubRings.png?raw=true", "https://github.com/Mecozz/Digital-Menu/blob/main/StkFries.png?raw=true", "image2c.jpg"],
+      ["https://github.com/Mecozz/Digital-Menu/blob/main/Calzone4.png?raw=true", "https://github.com/Mecozz/Digital-Menu/blob/main/Calzone3.png?raw=true", "image3c.jpg"],
+      ["image4a.jpg", "https://github.com/Mecozz/Digital-Menu/blob/main/CalzoneRingsFries.png?raw=true", "image4c.jpg"],
+      ["image5a.jpg", "image5b.jpg", "image5c.jpg"],
+      ["image6a.jpg", "image6b.jpg", "image6c.jpg"],
+      ["image7a.jpg", "image7b.jpg", "image7c.jpg"],
+      ["image8a.jpg", "image8b.jpg", "image8c.jpg"]
+    ];
+    const imgElements = document.querySelectorAll(".image-slider img");
+    let index = 0;
+    setInterval(() => {
+      imgElements.forEach((img, i) => {
+        img.src = images[i][index % images[i].length];
+      });
+      index++;
+    }, 5000);
+  </script>
 </body>
 </html>
