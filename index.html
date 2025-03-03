@@ -113,27 +113,5 @@
       <img src="placeholder4.jpg" id="img4" alt="Featured Dish 4">
     </div>
   </div>
-  
-  <script>
-    const images = [
-      ["image1a.jpg", "image1b.jpg", "image1c.jpg"],
-      ["image2a.jpg", "image2b.jpg", "image2c.jpg"],
-      ["image3a.jpg", "image3b.jpg", "image3c.jpg"],
-      ["image4a.jpg", "image4b.jpg", "image4c.jpg"]
-    ];
-    const imgElements = [
-      document.getElementById("img1"),
-      document.getElementById("img2"),
-      document.getElementById("img3"),
-      document.getElementById("img4")
-    ];
-    let index = 0;
-    setInterval(() => {
-      for (let i = 0; i < imgElements.length; i++) {
-        imgElements[i].src = images[i][index % images[i].length];
-      }
-      index++;
-    }, 5000);
-  </script>
 </body>
 </html>
