@@ -21,15 +21,27 @@
       font-weight: bold;
       color: red;
     }
+    .menu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin: auto;
+    }
     .menu-subtitle {
       font-size: 2em;
       background: yellow;
       color: red;
       padding: 10px;
-      margin: 10px 0;
-      display: block;
-      width: 100%;
       font-weight: bold;
+      flex: 1;
+    }
+    .tax-note {
+      font-size: 1.8em;
+      color: red;
+      font-weight: bold;
+      margin-left: 15px;
+      white-space: nowrap;
     }
     .menu-table {
       width: 100%;
@@ -56,28 +68,37 @@
     .price {
       text-align: right;
     }
-    
-    /* Image Slider - Reduced Size */
+
+    /* Image Slider */
     .image-slider {
       display: flex;
       justify-content: space-evenly;
       align-items: center;
-      margin-top: 40px;
+      margin-top: 20px;
       width: 100%;
+      padding-bottom: 20px;
     }
     .image-slider img {
-      width: 15%; /* Reduced from 18% */
-      height: 120px; /* Reduced from 150px */
+      width: 12%;
+      height: 100px;
       object-fit: cover;
       border-radius: 8px;
       transition: opacity 1s ease-in-out;
     }
-    .image-slider img.error {
-      content: url('fallback.jpg');
-    }
 
-    /* Mobile View Adjustments */
+    /* Mobile Adjustments */
     @media (max-width: 768px) {
+      .menu-header {
+        flex-direction: column;
+      }
+      .menu-subtitle {
+        text-align: center;
+      }
+      .tax-note {
+        margin-left: 0;
+        margin-top: 5px;
+        text-align: center;
+      }
       .menu-table {
         flex-direction: column;
         align-items: center;
@@ -86,8 +107,8 @@
         width: 100%;
       }
       .image-slider img {
-        width: 25%;
-        height: 100px;
+        width: 20%;
+        height: 90px;
       }
     }
   </style>
@@ -95,7 +116,11 @@
 <body>
   <div class="menu-container">
     <h1 class="menu-title">JIMMY'S HOUSE OF PIZZA</h1>
-    <h2 class="menu-subtitle">HOT OR COLD SUBS</h2>
+    
+    <div class="menu-header">
+      <h2 class="menu-subtitle">HOT OR COLD SUBS</h2>
+      <p class="tax-note">* ALL PRICES INCLUDE TAXES *</p>
+    </div>
     
     <div class="menu-table">
       <div class="menu-column">
@@ -136,23 +161,5 @@
       <img src="https://github.com/Mecozz/Digital-Menu/blob/main/CalzoneRingsFries.png?raw=true" alt="Featured Dish 5">
     </div>
   </div>
-  
-  <script>
-    const images = [
-      ["https://github.com/Mecozz/Digital-Menu/blob/main/pizza4.png?raw=true", "https://github.com/Mecozz/Digital-Menu/blob/main/Pizza2.png?raw=true"],
-      ["https://github.com/Mecozz/Digital-Menu/blob/main/Calzone1.png?raw=true", "https://github.com/Mecozz/Digital-Menu/blob/main/Calzone4.png?raw=true"],
-      ["https://github.com/Mecozz/Digital-Menu/blob/main/CalzoneRingsFries.png?raw=true", "https://github.com/Mecozz/Digital-Menu/blob/main/Calzone5.png?raw=true"],
-      ["https://github.com/Mecozz/Digital-Menu/blob/main/StkFries.png?raw=true", "https://github.com/Mecozz/Digital-Menu/blob/main/StkCheese.png?raw=true"],
-      ["https://github.com/Mecozz/Digital-Menu/blob/main/Spaghetti.png?raw=true", "https://github.com/Mecozz/Digital-Menu/blob/main/CalzoneRingsFries.png?raw=true"]
-    ];
-
-    let index = 0;
-    setInterval(() => {
-      document.querySelectorAll(".image-slider img").forEach((img, i) => {
-        img.src = images[i][index % images[i].length];
-      });
-      index++;
-    }, 8000);
-  </script>
 </body>
 </html>
