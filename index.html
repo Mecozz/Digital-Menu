@@ -16,39 +16,41 @@
       margin: auto;
       padding-top: 20px;
     }
+
+    /* Title with Shadow Effect */
     .menu-title {
       font-size: 3.5em;
       font-weight: bold;
       color: red;
+      text-shadow: 3px 3px 5px rgba(255, 0, 0, 0.6); /* Drop Shadow */
     }
+
+    /* Full-Width Yellow Banner */
     .menu-header {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      width: 100%;
-      margin: auto;
-    }
-    .menu-subtitle {
-      font-size: 2em;
       background: yellow;
-      color: red;
-      padding: 10px;
+      padding: 15px; /* Adjusted for balance */
+      font-size: 2em;
       font-weight: bold;
+      width: 100%;
+    }
+    .menu-header span {
+      color: red;
       flex: 1;
+      text-align: center;
+      padding: 0 20px;
     }
-    .tax-note {
-      font-size: 1.8em;
-      color: red;
-      font-weight: bold;
-      margin-left: 15px;
-      white-space: nowrap;
-    }
+
+    /* Menu Layout Improvements */
     .menu-table {
       width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
       text-align: left;
+      margin-top: 10px;
     }
     .menu-column {
       width: 48%;
@@ -59,7 +61,7 @@
     }
     th, td {
       font-size: 1.8em;
-      padding: 10px;
+      padding: 12px 10px; /* Improved spacing */
     }
     th {
       text-align: center;
@@ -86,19 +88,8 @@
       transition: opacity 1s ease-in-out;
     }
 
-    /* Mobile Adjustments */
+    /* Mobile Fixes */
     @media (max-width: 768px) {
-      .menu-header {
-        flex-direction: column;
-      }
-      .menu-subtitle {
-        text-align: center;
-      }
-      .tax-note {
-        margin-left: 0;
-        margin-top: 5px;
-        text-align: center;
-      }
       .menu-table {
         flex-direction: column;
         align-items: center;
@@ -117,9 +108,10 @@
   <div class="menu-container">
     <h1 class="menu-title">JIMMY'S HOUSE OF PIZZA</h1>
     
+    <!-- Full-Width Yellow Banner -->
     <div class="menu-header">
-      <h2 class="menu-subtitle">HOT OR COLD SUBS</h2>
-      <p class="tax-note">* ALL PRICES INCLUDE TAXES *</p>
+      <span>HOT OR COLD SUBS</span>
+      <span>* ALL PRICES INCLUDE TAXES *</span>
     </div>
     
     <div class="menu-table">
@@ -154,11 +146,10 @@
     </div>
     
     <div class="image-slider">
-      <img src="https://github.com/Mecozz/Digital-Menu/blob/main/Calzone5.png?raw=true" id="img1" alt="Featured Dish 1">
-      <img src="https://github.com/Mecozz/Digital-Menu/blob/main/Spaghetti.png?raw=true" id="img2" alt="Featured Dish 2">
+      <img src="https://github.com/Mecozz/Digital-Menu/blob/main/Calzone5.png?raw=true" alt="Featured Dish 1">
+      <img src="https://github.com/Mecozz/Digital-Menu/blob/main/Spaghetti.png?raw=true" alt="Featured Dish 2">
       <img src="https://github.com/Mecozz/Digital-Menu/blob/main/Calzone4.png?raw=true" alt="Featured Dish 3">
-      <img src="https://github.com/Mecozz/Digital-Menu/blob/main/StkCheese.png?raw=true" id="img4" alt="Featured Dish 4">
-      <img src="https://github.com/Mecozz/Digital-Menu/blob/main/CalzoneRingsFries.png?raw=true" alt="Featured Dish 5">
+      <img src="https://github.com/Mecozz/Digital-Menu/blob/main/StkCheese.png?raw=true" alt="Featured Dish 4">
     </div>
   </div>
 </body>
